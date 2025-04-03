@@ -8,11 +8,13 @@ The Mess Mate is a web-based solution designed to streamline mess operations, in
 🚀 Features
 
 ✅ User Authentication – Secure login and registration system
+
 ✅ Meal Management – Allows users to book meals and track their meal history
-✅ Inventory Management – Helps mess admins monitor stock and supplies
-✅ Role-Based Access – Different access levels for admins and users
+
 ✅ Billing & Payments – Automated bill generation and tracking
+
 ✅ Reports & Analytics – Insights into meal consumption and mess usage
+
 🛠️ Tech Stack
 Technology Description
 Frontend HTML, CSS, JavaScript
