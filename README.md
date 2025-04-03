@@ -53,7 +53,6 @@ Environment Linux (Arch-based)
 1️⃣ Clone the repository
 
 git clone https://github.com/greedoftheendless/Software-Engineering-Project.git
-cd mess-management-system
 
 2️⃣ Install dependencies
 
