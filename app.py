@@ -2,6 +2,7 @@ import os
 import csv
 import sqlite3
 from flask import Flask, render_template, request, redirect, url_for, flash, session, send_file
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -17,8 +18,9 @@ def register_user(username, email, password):
     try:
         conn = get_db_connection()
         c = conn.cursor()
+        hashed_password = generate_password_hash(password)
         c.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', 
-                 (username, email, password))
+                 (username, email, hashed_password))
         conn.commit()
         conn.close()
         return True
@@ -34,7 +36,7 @@ def login_user(username, password):
         c = conn.cursor()
         c.execute('SELECT password FROM users WHERE username=?', (username,))
         row = c.fetchone()
-        return bool(row and row[0] == password)
+        return bool(row and check_password_hash(row[0], password))
     finally:
         if 'conn' in locals():
             conn.close()
