@@ -16,12 +16,19 @@ The Mess Mate is a web-based solution designed to streamline mess operations, in
 ✅ Reports & Analytics – Insights into meal consumption and mess usage
 
 🛠️ Tech Stack
+
 Technology Description
+
 Frontend HTML, CSS, JavaScript
+
 Backend Python (Flask)
+
 Database SQLite
+
 Version Control Git & GitHub
+
 Environment Linux (Arch-based)
+
 📂 Project Structure
 
 📦 Mess-Management-System
