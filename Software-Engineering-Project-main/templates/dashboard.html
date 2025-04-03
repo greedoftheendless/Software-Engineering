@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dashboard.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="{{ url_for('static', filename='assets/Tasty.png') }}"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+      <div class="header-right">
+        <a href="{{ url_for('contact') }}" class="contact-link">Contact</a>
+        <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+        <p class="user-name">{{ user_name }}</p>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="{{ url_for('create_sheet') }}" class="navbar__link">
+            <span>Book mess for today</span>
+          </a>
+        </li>
+      </ul>
+
+      <form class="searchform" method="GET">
+        <input type="text" name="search" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+
+    <main>
+      <div class="main-panel">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %} {% endif %} {% endwith %}
+
+     <!-- Start Call To Action Area -->
+     <section class="section call-action">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                  <div class="cta-content">
+                      <h2 class="wow fadeInUp" data-wow-delay=".2s">Checkout the the Trial<br>Version of Messmate
+                      </h2>
+                      <p class="wow fadeInUp" data-wow-delay=".4s">Get a Taste of Success: Contact Us Today to Set Up Your Canteen's Trial Version! Experience Efficiency and Ease with Our Tailored Solutions.</p>
+                      <div class="button wow fadeInUp" data-wow-delay=".6s">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Call To Action Area -->
+
+   <!-- Start Footer Area -->
+<footer class="footer">
+                      <h3 class="footer-title">More Info</h3>
+                          <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                          <li><a href="privacy.html">Privacy Policy</a></li>
+                          <li><a href="/refund.html">Cancellation & Refund Policy</a></li>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--/ End Footer Top -->
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center">
+                  <p>&copy; 2025 MessMate. All Rights Reserved.</p>
+              </div>
+          </div>
+      </div>
+  </div
+
