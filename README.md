@@ -64,7 +64,7 @@ python app.py
 
 4️⃣ Open in browser
 
-http://127.0.0.1:8000/(This is the local host of your device and redirects to port 8000 to open up the website)
+http://127.0.0.1:8000. This is the local host of your device and redirects to port 8000 to open up the website)
 
 📸 Screenshots
 🔹 Login Page
